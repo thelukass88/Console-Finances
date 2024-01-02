@@ -86,3 +86,56 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+console.log('Financial Analysis:');
+
+// * Total Months
+
+let totalMonths = finances.length;
+console.log("The total number of months are: " + totalMonths);
+
+// *The net total mount of Profit/ Loss over whole period.*
+let totalNetSum = 0;
+totalNetSum = finances.reduce((accumulator, value) => {
+  return accumulator + value[1];
+}, 0);
+
+console.log(`Total: £${totalNetSum}`);
+
+// * The average of the changes in Profit/Losses over the entire period. *
+let differences = [];
+for (let i = 1; i < totalMonths; i++) {
+  let difference = finances[i][1] - finances[i - 1][1];
+  differences.push(difference);
+}
+//* push method is adding new length to array after total length is added together and total sum calculated
+differenceSum = 0;
+for (i = 0; i < differences.length; i++) {
+   differenceSum += differences[i];
+}
+let averageChange = differenceSum / (totalMonths - 1);
+//* learned to use toFixed here - article on https://www.w3schools.com/jsref/jsref_tofixed.asp - 
+//* rounding to the nearest 100th
+console.log(`Average Change: £${averageChange.toFixed(2)}`);
+
+// * The greatest increase AND decreases in profits (date and difference in the amounts) over the entire period.
+//* defined variables - possibly too long? needed a simpler word
+let profitIncrease, profitDecrease;
+let profitIncreaseMonth, profitDecreaseMonth;
+
+profitIncrease = differences[0];
+profitDecrease = differences[0];
+
+for (let difference of differences) {
+  if (profitIncrease < difference) {
+    profitIncrease = difference;
+    profitIncreaseMonth = finances[differences.indexOf(difference) + 1][0];
+  }
+  if (profitDecrease > difference) {
+    profitDecrease = difference;
+    profitDecreaseMonth = finances[differences.indexOf(difference) + 1][0];
+  }
+}
+//* indexOf used above to locate the desired string
+console.log(`Greatest Increase in Profits: ${profitIncreaseMonth} (£${profitIncrease})`);
+console.log(`Greatest Decrease in Profits ${profitDecreaseMonth} (£${profitDecrease})`);
