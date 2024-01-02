@@ -1,5 +1,13 @@
 # <Console-Finnces>
 
+## Links
+
+Github repository link:
+https://github.com/thelukass88/Console-Finances
+
+Site link:
+https://thelukass88.github.io/Console-Finances/
+
 ## Description
 
 This activity presents a real-world situation The task is to create code for analyzing the financial records of a company. The dataset has been provided by the client.
@@ -19,7 +27,7 @@ The task is to write JavaScript code that analyzes the records to calculate each
 
 - The greatest decrease in losses (date and difference in the amounts) over the entire period.
 
-# Expected Output
+## Expected Output
 Financial Analysis
 ----------------------------
 Total Months: 86
