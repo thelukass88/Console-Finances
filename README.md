@@ -1,38 +1,25 @@
-# Console-Finances
-Module 4 Challenge - Profit/ Loss Over Time
+# <Console-Finnces>
 
-In this Challenge, you'll be using the concepts you've learned to create a financial analysis tool.
+## Description
 
-JavaScript Fundamentals: Console Finances
-This activity presents a real-world situation in which your newfound JavaScript skills will come in handy. You are tasked with creating code for analyzing the financial records of a company. You have been provided with a financial dataset in the starter/index.js file.
+This activity presents a real-world situation The task is to create code for analyzing the financial records of a company. The dataset has been provided by the client.
 
-Before you begin, download your starter codeLinks to an external site. for this Challenge and unzip the zip file.
+I have been provided with a dataset composed of arrays with two fields: Date and Profit/Losses.
 
-Instructions
-Create a new GitHub repo called Console-Finances. Then, clone it to your computer.
+The task is to write JavaScript code that analyzes the records to calculate each of the following:
 
-Copy the starter files into your local git repository.
+- The total number of months included in the dataset.
 
-You have been given a dataset composed of arrays with two fields: Date and Profit/Losses.
+- The net total amount of Profit/Losses over the entire period.
 
-Your task is to write JavaScript code that analyzes the records to calculate each of the following:
-
-The total number of months included in the dataset.
-
-The net total amount of Profit/Losses over the entire period.
-
-The average of the changes in Profit/Losses over the entire period.
-
-You will need to track what the total change in profits is from month to month and then find the average.
-
+- The average of the changes in Profit/Losses over the entire period.
 (Total/(Number of months - 1))
 
-The greatest increase in profits (date and difference in the amounts) over the entire period.
+- The greatest increase in profits (date and difference in the amounts) over the entire period.
 
-The greatest decrease in losses (date and difference in the amounts) over the entire period.
+- The greatest decrease in losses (date and difference in the amounts) over the entire period.
 
-When you open your code in the browser your resulting analysis should look similar to the following:
-
+# Expected Output
 Financial Analysis
 ----------------------------
 Total Months: 86
@@ -42,10 +29,32 @@ Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
 Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
 Your final code should print the analysis to the console.
 
-Hints:
+## Usage
 
-You will need to do some research on your own for this project!
+Console logs the output of the criteria above. 
 
-Remember, in order to combine strings and variables in the console, you will need to use concatenation.
+![alt screenshot of console output](./assets/Image%2002-01-2024%20at%2022.40.jpeg)
 
-How do you only print to the nearest 100th in JavaScript?
+## Credits
+
+Credited below are the websites I used for loops, functions and arrays I have not used before. 
+
+reduce function
+https://builtin.com/software-engineering-perspectives/javascript-reduce
+
+toFixed 
+https://www.w3schools.com/jsref/jsref_tofixed.asp
+
+Using Array indexOf
+https://www.programiz.com/javascript/library/array/indexof
+
+for...of
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+
+
+
+## License
+
+MIT Licence - See repo
+
+---
